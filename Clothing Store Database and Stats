@@ -1,0 +1,36 @@
+
+--Create a grocery store database
+
+
+CREATE TABLE Clothing (ID INTEGER primary key, Item_type TEXT,Quantity INTEGER, Price INTEGER, Size TEXT);
+
+INSERT INTO Clothing VALUES ( 1, "Jeans", 10, 50.00, "Large");
+INSERT INTO Clothing VALUES ( 2, "shorts", 20, 10.00, "medium");
+INSERT INTO Clothing VALUES ( 3, "shoes", 60, 100.00, "small");
+INSERT INTO Clothing VALUES ( 4, "t-shirt", 20, 25.00, "Large");
+INSERT INTO Clothing VALUES ( 5, "sweater", 10, 50.00, "small");
+INSERT INTO Clothing VALUES ( 6, "legging", 30, 75.00,"medium");
+INSERT INTO Clothing VALUES ( 7, "pants", 10, 77.00, "Large");
+INSERT INTO Clothing VALUES ( 8, "hoodies", 40, 75.00,"small");
+INSERT INTO Clothing VALUES ( 9, "Jackets", 40, 95.00,"medium");
+INSERT INTO Clothing VALUES ( 10, "scarf", 40, 25.00,"small");
+INSERT INTO Clothing VALUES ( 11, "tank-top",35, 35.00,"Large");
+INSERT INTO Clothing VALUES ( 12, "dress", 50, 80.00, "medium");
+INSERT INTO Clothing VALUES ( 13, "blazer", 50,100.00, "Large");
+INSERT INTO Clothing VALUES ( 14, "glove", 10, 50.00, "small");
+INSERT INTO Clothing VALUES ( 15, "cap", 30, 35.00, "LARGE");
+
+--display the database ordered by price
+
+SELECT * from Clothing
+ORDER BY Price;
+
+--dispaly the database with price equal and greater than 50 
+
+SELECT * from Clothing
+WHERE Price >= 50;
+
+--what is the avg price of items in the size large? 
+
+SELECT AVG(price) from clothing WHERE Size= "Large";
+
